@@ -1,7 +1,7 @@
 #pragma once
 #pragma warning(disable:4275) //solve this later!
 #include "function/include/functionfactory.h"
-#include "token_name.h"
+#include "token_data.h"
 using namespace functionfactory;
 namespace functions {
 	namespace algebra {
@@ -22,7 +22,7 @@ namespace functions {
 			//instances
 			//(+)
 			inline int_add_function int_add{
-				token_name::token_name_to_id(L"int_add"),	//name
+				token_data::token_name_to_id(L"int_add"),	//name
 				{	//default values
 					nullptr,
 					nullptr,
@@ -30,7 +30,7 @@ namespace functions {
 				}
 			};
 			inline float_add_function float_add{
-				token_name::token_name_to_id(L"float_add"),
+				token_data::token_name_to_id(L"float_add"),
 				{
 					nullptr,
 					nullptr,
@@ -38,7 +38,7 @@ namespace functions {
 				}
 			};
 			inline add_function add{
-				token_name::token_name_to_id(L"add"),	//name
+				token_data::token_name_to_id(L"add"),	//name
 				{	//defaultvalues
 					nullptr,
 					nullptr,
@@ -60,26 +60,6 @@ namespace functions {
 							{1, false},
 							{2, false}
 						}
-					}
-				},
-				{   //valuetypes
-					{
-						(void*)0,
-						(void*)1,
-						(void*)2,
-						(void*)3
-					},
-					{
-						(void*)0,
-						(void*)1,
-						(void*)2,
-						(void*)3
-					},
-					{
-						(void*)0,
-						(void*)1,
-						(void*)2,
-						(void*)3
 					}
 				},
 				nullptr //&mux (to do)

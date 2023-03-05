@@ -1,7 +1,7 @@
 #pragma once
 #pragma warning(disable:4275) //solve this later!
 #include "function/include/functionfactory.h"
-#include "token_name.h"
+#include "token_data.h"
 using namespace functionfactory;
 namespace functions {
 	namespace algebra {
@@ -19,7 +19,7 @@ namespace functions {
 			//instances
 			//(-)
 			inline int_sub_function int_sub{
-				token_name::token_name_to_id(L"int_sub"),	//name
+				token_data::token_name_to_id(L"int_sub"),	//name
 				{
 					nullptr,
 					nullptr,
@@ -27,7 +27,7 @@ namespace functions {
 				}
 			};
 			inline float_sub_function float_sub{
-				token_name::token_name_to_id(L"float_sub"),	//name
+				token_data::token_name_to_id(L"float_sub"),	//name
 				{
 					nullptr,
 					nullptr,

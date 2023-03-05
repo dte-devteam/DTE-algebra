@@ -5,7 +5,7 @@ namespace functions {
 			//(/)
 			void int_div_function::execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 				std::vector<void*> values;
-				filldefaultvalues(argumentspointer, &values);
+				filldefaultvalues(argumentspointer, values);
 				if (values[2] && values[1] && values[0]) {
 					if (*(int*)values[1] == 0) {
 						if (errorcodepointer) {
@@ -23,7 +23,7 @@ namespace functions {
 			}
 			void float_div_function::execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 				std::vector<void*> values;
-				filldefaultvalues(argumentspointer, &values);
+				filldefaultvalues(argumentspointer, values);
 				if (values[2] && values[1] && values[0]) {
 					if (!errorcodepointer || forced) {
 						*(float*)values[2] = *(float*)values[0] / *(float*)values[1];
