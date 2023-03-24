@@ -115,7 +115,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..\DynamicTokenEngine\TokenOperator;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DTE\DynamicTokenEngine\TokenOperator;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -137,7 +137,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..\DynamicTokenEngine\TokenOperator;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\DTE\DynamicTokenEngine\TokenOperator;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -162,17 +162,8 @@
     <ClInclude Include="sub\sub.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="add\add.cpp" />
-    <ClCompile Include="div\div.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mul\mul.cpp" />
-    <ClCompile Include="sub\sub.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\TokenOperator\TokenOperator.vcxproj">
-      <Project>{0007904b-0187-456f-b355-c552e1bb6c2d}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="exporttable.def" />

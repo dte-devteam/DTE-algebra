@@ -6,19 +6,9 @@ using namespace functionfactory;
 namespace functions {
 	namespace algebra {
 		namespace div {
-			//constructors
-			//(/)
-			struct int_div_function : basicfunction {
-				using basicfunction::basicfunction;
-				void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream);
-			};
-			struct float_div_function : basicfunction {
-				using basicfunction::basicfunction;
-				void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream);
-			};
 			//instances
 			//(/)
-			inline int_div_function int_div {
+			inline div_template<int> int_div {
 				token_data::token_name_to_id(L"int_div"),	//name
 				{
 					nullptr,
@@ -26,7 +16,7 @@ namespace functions {
 					nullptr
 				}
 			};
-			inline float_div_function float_div {
+			inline div_with_0_template<float> float_div {
 				token_data::token_name_to_id(L"float_div"),	//name
 				{
 					nullptr,
