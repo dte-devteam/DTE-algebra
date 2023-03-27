@@ -8,22 +8,22 @@ namespace functions {
 		namespace sub {
 			//instances
 			//(-)
-			inline sub_template<int> int_sub{
+			inline sub_template<int>* int_sub = new sub_template<int>(
 				token_data::token_name_to_id(L"int_sub"),	//name
 				{
 					nullptr,
 					nullptr,
 					nullptr
 				}
-			};
-			inline sub_template<float> float_sub{
+			);
+			inline sub_template<float>* float_sub = new sub_template<float>(
 				token_data::token_name_to_id(L"float_sub"),	//name
 				{
 					nullptr,
 					nullptr,
 					nullptr
 				}
-			};
+			);
 		}
 	}
 }

@@ -8,22 +8,22 @@ namespace functions {
 		namespace mul {
 			//instances
 			//(*)
-			inline mul_template<int> int_mul{
+			inline mul_template<int>* int_mul = new mul_template<int>(
 				token_data::token_name_to_id(L"int_mul"),	//name
 				{
 					nullptr,
 					nullptr,
 					nullptr
 				}
-			};
-			inline mul_template<float> float_mul{
+			);
+			inline mul_template<float>* float_mul = new mul_template<float>(
 				token_data::token_name_to_id(L"float_mul"),	//name
 				{
 					nullptr,
 					nullptr,
 					nullptr
 				}
-			};
+			);
 		}
 	}
 }

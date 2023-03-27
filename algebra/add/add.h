@@ -7,23 +7,23 @@ namespace functions {
 		namespace add {
 			//instances
 			//(+)
-			inline add_template<int> int_add{
+			inline add_template<int>* int_add = new add_template<int>(
 				token_data::token_name_to_id(L"int_add"),	//name
 				{	//default values
 					nullptr,
 					nullptr,
 					nullptr
 				}
-			};
-			inline add_template<float> float_add{
+			);
+			inline add_template<float>* float_add = new add_template<float>(
 				token_data::token_name_to_id(L"float_add"),	//name
 				{	//default values
 					nullptr,
 					nullptr,
 					nullptr
 				}
-			};
-			inline functionfactory::muxfunction add{
+			);
+			inline functionfactory::muxfunction* add = new functionfactory::muxfunction(
 				token_data::token_name_to_id(L"add"),	//name
 				{	//defaultvalues
 					nullptr,
@@ -32,7 +32,7 @@ namespace functions {
 				},
 				{	//callings
 					{
-						&int_add,
+						int_add,
 						{
 							{0, false},
 							{1, false},
@@ -40,7 +40,7 @@ namespace functions {
 						}
 					},
 					{
-						&float_add,
+						float_add,
 						{
 							{0, false},
 							{1, false},
@@ -49,7 +49,7 @@ namespace functions {
 					}
 				},
 				nullptr //&mux (to do)
-			};
+			);
 		}
 	}
 }
