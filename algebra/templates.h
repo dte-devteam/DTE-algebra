@@ -1,7 +1,7 @@
 #pragma once
-#include "function/include/functionfactory.h"
+#include "function/include/basicfunction.h"
 template <class T>
-struct add_template : functionfactory::basicfunction {
+struct add_template : function::basicfunction {
 	using basicfunction::basicfunction;
 	void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 		std::vector<void*> values;
@@ -15,7 +15,7 @@ struct add_template : functionfactory::basicfunction {
 	}
 };
 template <class T>
-struct div_template : functionfactory::basicfunction {
+struct div_template : function::basicfunction {
 	using basicfunction::basicfunction;
 	void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 		std::vector<void*> values;
@@ -35,7 +35,7 @@ struct div_template : functionfactory::basicfunction {
 	}
 };
 template <class T>
-struct div_with_0_template : functionfactory::basicfunction {
+struct div_with_0_template : function::basicfunction {
 	using basicfunction::basicfunction;
 	void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 		std::vector<void*> values;
@@ -49,7 +49,7 @@ struct div_with_0_template : functionfactory::basicfunction {
 	}
 };
 template <class T>
-struct mul_template : functionfactory::basicfunction {
+struct mul_template : function::basicfunction {
 	using basicfunction::basicfunction;
 	void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 		std::vector<void*> values;
@@ -63,7 +63,7 @@ struct mul_template : functionfactory::basicfunction {
 	}
 };
 template <class T>
-struct sub_template : functionfactory::basicfunction {
+struct sub_template : function::basicfunction {
 	using basicfunction::basicfunction;
 	void execute(std::vector<void*>* argumentspointer, uint64_t* errorcodepointer, bool forced, void* stream) {
 		std::vector<void*> values;

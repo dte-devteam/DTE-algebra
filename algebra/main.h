@@ -3,11 +3,10 @@
 #include "div/div.h"
 #include "sub/sub.h"
 #include "mul/mul.h"
-#include "module/include/dependency_desc.h"
-using namespace dependency_desc;
+#include "module/include/function_data.h"
 namespace functions {
 	namespace algebra {
-		inline std::vector<basicfunction*>* dllfunctions = new std::vector<basicfunction*>({//outdated
+		inline std::vector<function::basicfunction*>* dllfunctions = new std::vector<function::basicfunction*>({//outdated
 				add::int_add,
 				add::float_add,
 				add::add,
@@ -19,7 +18,7 @@ namespace functions {
 				div::float_div
 		});
 		//module has no dependencies, so function has empty reqirements ({ basicfunction*, })
-		static std::vector<function_data>* ndllfunctions = new std::vector<function_data>({
+		static std::vector<module::function_data>* ndllfunctions = new std::vector<module::function_data>({
 			{ add::int_add },
 			{ add::float_add },
 			{ add::add },
@@ -31,10 +30,10 @@ namespace functions {
 			{ div::float_div },
 		});
 		//export functions
-		std::vector<basicfunction*>* getfunctions() { //outdated
+		std::vector<function::basicfunction*>* getfunctions() { //outdated
 			return dllfunctions;
 		}
-		std::vector<function_data>* getnfunctions() {
+		std::vector<module::function_data>* getnfunctions() {
 			return ndllfunctions;
 		}
 	}

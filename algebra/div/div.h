@@ -1,9 +1,7 @@
 #pragma once
 #pragma warning(disable:4275) //solve this later!
-#include "function/include/functionfactory.h"
 #include "token_data.h"
 #include "../templates.h"
-using namespace functionfactory;
 namespace functions {
 	namespace algebra {
 		namespace div {

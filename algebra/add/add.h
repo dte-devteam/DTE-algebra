@@ -1,5 +1,6 @@
 #pragma once
 #pragma warning(disable:4275) //solve this later!
+#include "function/include/muxfunction.h"
 #include "token_data.h"
 #include "../templates.h"
 namespace functions {
@@ -23,7 +24,7 @@ namespace functions {
 					nullptr
 				}
 			);
-			inline functionfactory::muxfunction* add = new functionfactory::muxfunction(
+			inline function::muxfunction* add = new function::muxfunction(
 				token_data::token_name_to_id(L"add"),	//name
 				{	//defaultvalues
 					nullptr,

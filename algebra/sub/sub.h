@@ -2,7 +2,6 @@
 #pragma warning(disable:4275) //solve this later!
 #include "token_data.h"
 #include "../templates.h"
-using namespace functionfactory;
 namespace functions {
 	namespace algebra {
 		namespace sub {
